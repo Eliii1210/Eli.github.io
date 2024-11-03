@@ -3,7 +3,7 @@ function logoutUser() {
    localStorage.removeItem('loggedInUser');  
    alert('Has cerrado sesión exitosamente.');
    updateNav();  // Actualizar la barra de navegación
-   window.location.href = '/index.html';  // Redirigir a la página principal
+   window.location.href = 'index.html';  // Redirigir a la página principal
  }
  
  // Evento para gestionar el cierre de sesión
