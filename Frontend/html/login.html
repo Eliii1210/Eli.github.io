@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Floristería - Login</title>
+  <link rel="stylesheet" href="../CSS/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <header>
+    <a href="/index.html" ><img src="/Frontend/media/logo.png" alt="logo" id="logoI"></a>
+    <button class="hamburger" id="hamburger-btn">&#9776;</button> <!-- Botón del menú hamburguesa -->
+    <nav id="navbar">
+      <button id="theme-toggle" class="theme-toggle">Modo Oscuro</button>
+      <a href="/index.html">Inicio</a>
+      <a href="/Frontend/html/acercade.html" id="acercade-link">Acerca de</a>
+      <a href="/Frontend/html/contactos.html" id="contactos-link">Contactos</a>
+      <a href="/Frontend/html/ubicacion.html" id="ubicacion-link">Ubicación</a>
+      <a href="/Frontend/html/historial.html" id="historial-link" style="display:none;">Ver Compras</a>
+      <a href="/Frontend/html/admin.html" id="productos-link" style="display:none;">Productos</a>
+      <a href="/Frontend/html/register.html" id="register-link">Registrar</a>
+      <span id="welcome-message" style="display:none;"></span>
+      <a href="#" id="logout-link" style="display:none;">Cerrar Sesión</a>
+      <button id="cart-btn">Carrito (0)</button>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <div class="form-container">
+      <p class="titulo">Inicia Sesión</p>
+      <form id="login-form">
+        <div class="input-group">
+          <label class="uss" for="username">Usuario</label>
+          <input class="usuario" type="text" id="login-username" placeholder="Usuario" required>
+        </div>
+        <div class="input-group">
+          <label class="uss" for="password">Contraseña</label>
+        <input class="usuario" type="password" id="login-password" placeholder="Contraseña" required>
+          <div class="forgot">
+          </div>
+        </div>
+        <button class="iniciar">Inicia sesión</button>
+      </form>
+      <div class="social-message">
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="social-icons">
+        <button aria-label="Log in with Google" class="icon">
+         <img src="/Frontend/media/google.svg" alt="">
+        </button>
+        <button aria-label="Log in with Twitter" class="icon">
+         <img src="/Frontend/media/twitter-x.svg" alt="">
+        </button>
+        <button aria-label="Log in with GitHub" class="icon">
+        <img src="/Frontend/media/github.svg" alt="">
+        </button>
+      </div>
+      <p class="signup">No tienes una cuenta aun?
+        <a rel="noopener noreferrer" href="/Frontend/html/register.html" class="">Registrate</a>
+      </p>
+    </div>
+    </main>
+
+  <footer>
+    <span>©Elifloristería - Todos los derechos reservados</span>
+    
+    <div class="footerdiv">
+      <div class="footerdiv1">
+        <img src="/Frontend/media/logo.png" style="border-radius: 5px; width: 200px; height: 150px;" alt="logo">
+      </div>
+      <div class="footerdiv2">
+        <h3 class="headline footer">Servicio al Cliente</h3>
+        <ul class="footer-links">
+          <li><a href="#">Métodos de Pago</a></li>
+          <li><a href="#">Entregas y Devoluciones</a></li>
+          <li><a href="#">Políticas de Cookies</a></li>
+          <li><a href="#">Políticas de Privacidad</a></li>
+          <li><a href="#">Términos y Condiciones</a></li>
+          <li><a href="#">Reclamaciones</a></li>
+        </ul>
+      </div>
+      <div class="footerdiv2">
+        <h3 class="headline footer">Contáctenos</h3>
+        <ul>
+          <li><i class="fa fa-phone" aria-hidden="true"></i><a href="tel:2230-5200" class="ng-binding">2230-5222</a></li>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i>
+            <a class="ng-binding" href="mailto:Elifloristería@gmail.com">:Elifloristería@gmail.com</a>
+          </li>
+          <li><a href="/Frontend/html/contactos.html"><i class="fa fa-comment" aria-hidden="true"></i> Contáctenos</a></li>
+          <li><a href="../HTML/preguntas.html"><i class="fa fa-question-circle" aria-hidden="true"></i> Preguntas Frecuentes</a></li>
+          <li><a href="/Frontend/html/ubicacion.html"><i class="fas fa-store" aria-hidden="true"></i> Superemercados</a></li>
+          <li><a href="/Frontend/html/acercade.html"><i class="fas fa-building" aria-hidden="true"></i> ¿Quiénes Somos?</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="/Frontend/js/login.js"></script>
+
+</body>
+</html>

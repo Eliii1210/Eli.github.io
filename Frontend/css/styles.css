@@ -1,0 +1,614 @@
+:root {
+  --background-color: #E4DEEE ;
+  --text-color: #000;
+  --header-background-color: #524E6B ;
+  --footer-background-color: #524E6B ;
+  --card-background-color: rgb(255, 255, 255);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-background-color);
+}
+
+footer {
+  background-color: var(--footer-background-color);
+}
+
+.product-card {
+  background-color: var(--card-background-color);
+}
+
+.dark-mode {
+  --background-color: #353535;
+  --text-color: #f1f1f1;
+  --header-background-color: #0a0a0a;
+  --footer-background-color: #0a0a0a;
+  --card-background-color: #252525;
+}
+
+.dark-mode nav a, .dark-mode #welcome-message {
+  color: #f1f1f1;
+}
+
+.dark-mode footer a {
+  color: #ddd;
+}
+
+html, body {
+  height: 100%;
+  margin:0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /*background-color: #fefeff;*/
+  display:flex;
+  flex-direction: column;
+  
+}
+
+header {
+  /*background-color: #120436;*/
+  color: #E4DEEE;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logoI{
+  width: 90px;
+  height: 100px;
+  border-radius: 50%;
+}
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a, #welcome-message {
+  color: #E4DEEE;
+  padding: 8px 15px;
+  text-decoration: none;
+}
+#welcome-message {
+  font-weight: bold;
+  color: lightgreen;
+  display: inline-block;
+}
+
+/* Estilo para el botón de hamburguesa */
+.hamburger {
+  display: none;
+  background-color: #524E6B;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  margin: 20px 0;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  margin: 10px 0;
+  padding: 8px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color:  #8F83B6;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b1d7b9;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 10px;
+  padding: 20px;
+}
+
+.product-card {
+ /* background-color: white;*/
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.product-card .sold-out {
+  color: rgb(116, 56, 145);
+  font-weight: bold;
+}
+
+#logout-link {
+  color: rgb(219, 137, 219);
+  cursor: pointer;
+}
+
+#welcome-message {
+  margin-right: 10px;
+  font-weight: bold;
+  color: rgb(219, 137, 219);
+}
+.compra {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.compra h3 {
+  margin: 0 0 10px;
+}
+
+.compra ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.compra ul li {
+  padding: 10px 0;
+}
+
+.compra p {
+  font-weight: bold;
+}
+
+footer{
+ /* background-color: #120436;*/
+  color: #E4DEEE;
+  text-align: center;
+  padding: 10px;
+  border-top: 1px solid #E4DEEE;
+  padding-top: 20px;
+}
+
+.footerdiv{
+  padding: 20px;
+  display: flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+}
+
+.footerdiv1{
+  padding-top: 20px; 
+  }
+
+.footerdiv2{
+  color: white;
+  text-align: left; 
+}
+
+footer a{
+  text-decoration: none;
+  color: rgb(234, 229, 229);
+}
+
+/* Para pantallas de hasta 768px (tablets y móviles en modo horizontal) */
+@media screen and (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  header, footer {
+    text-align: center; 
+  }
+
+  nav {
+    display: none; 
+    flex-direction: column; 
+    background-color: #524E6B;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  nav a {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* Muestra el botón de hamburguesa */
+  .hamburger {
+    display: block;
+  }
+
+  /* Muestra el menú cuando está activo */
+  nav.active {
+    display: flex;
+  }
+  
+  .hamburger.active {
+    content: "\2715"; 
+  }
+
+  .footerdiv {
+    flex-direction: column;
+    align-items: center;
+    color: #D9B0B0;
+  }
+
+  .footerdiv1, .footerdiv2 {
+    text-align: center;
+   
+  }
+
+  .footerdiv2 ul {
+    padding-left: 0;
+   
+  }
+
+  .footerdiv2 ul li {
+    list-style-type: none;
+    color: #3A354D;
+  }
+
+}
+ 
+.fa, .fab, .fad, .fal, .far, .fas{
+  color: #3A354D;
+}
+
+/* Para pantallas de hasta 480px (móviles en modo vertical) */
+@media screen and (max-width: 480px) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 10px;
+  }
+
+  button, input {
+    width: 100%; 
+  }
+
+  .hamburger.active {
+    content: "\2715"; 
+  }
+}
+
+/* Carrusel */
+/* Contenedor del carrusel */
+.carousel-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Carrusel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 500%;
+}
+
+/* Cada elemento del carrusel */
+.carousel-item {
+  min-width: 20%; 
+  transition: transform 0.5s ease;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 700px;
+  border-radius: 10px;
+}
+
+/* Controles de navegación */
+.carousel-prev, .carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.carousel-prev {
+  left: 10px;
+}
+
+.carousel-next {
+  right: 10px;
+}
+
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    width: 100%;
+  }
+
+  .carousel-prev, .carousel-next {
+    padding: 5px;
+  }
+}
+
+/* Mostrar el carrito cuando se activa la clase 'open' */
+.cart-sidebar.open {
+  right: 0;
+}
+
+
+
+/* Estilos para el carrito como barra lateral */
+
+.cart-sidebar {
+  position: fixed;
+  top: 0;
+  right: -400px; /* Fuera de la vista inicialmente */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transition: right 0.3s ease;
+  padding: 20px;
+  padding-top: 60px; /* Espacio para el botón de cierre */
+  z-index: 1000;
+}
+
+.cart-sidebar h2 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+
+.cart-sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cart-sidebar ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.cart-sidebar p {
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.cart-sidebar button {
+  width: 100%;
+  padding: 10px;
+  /*background-color: #120436;                //se usa bot+on con paleta de colores*/
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.cart-sidebar button:hover {
+  background-color: #b4a8f4;
+}
+
+/* Mostrar el carrito cuando se activa la clase 'open' */
+.cart-sidebar.open {
+  right: 0;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #333;
+  cursor: pointer;
+  text-align: right;
+  position: absolute;
+  top: 10px; 
+  right: 10px;
+}
+
+.close-cart:hover {
+  color: #c00;
+}
+
+
+
+/* Hover para botones en pantallas grandes */
+.carousel-prev:hover, .carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Ajustes de botones para pantallas pequeñas */
+@media (max-width: 768px) {
+  .carousel-item img {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+  }
+
+
+#cart-btn{
+  background-image: url(/Media/IMG/car2.png);
+  background-repeat: no-repeat;
+  background-size: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+#cart-btn,#theme-toggle, #hamburger-btn, .add-to-cart-btn, .cart-sidebar button, #login, #registro, .submit-btn, 
+.delete-button, #btn-modificar, #product-image,#agr,#btn-agregar,
+#btn-mensaje,
+#btn-eliminar {
+  background-color: var(--btn-button-color);
+}
+#product-image{
+  color: #f1f1f1;
+}
+
+
+
+  
+
+
+  /* From Uiverse.io by JohnnyCSilva */ 
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #BCB0D9;
+  padding: 30px;
+  width: 350px;
+  border-radius: 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form button {
+  align-self: flex-end;
+}
+
+.flex-column > label {
+  color: #000000;
+  font-weight: 600;
+}
+
+.inputForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.input {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.inputForm:focus-within {
+  border: 1.5px solid #000000;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.flex-row > div > label {
+  font-size: 14px;
+  color: black;
+  font-weight: 400;
+}
+
+.span {
+  font-size: 14px;
+  margin-left: 5px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color:  #8F83B6;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.btn {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #000000;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btn:hover {
+  border: 1px solid #000000;
+  ;
+}
+
+
+
