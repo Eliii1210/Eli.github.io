@@ -12,7 +12,7 @@
      alert(`Bienvenido, administrador`);
      console.log("Administrador logueado");
      localStorage.setItem('loggedInUser', 'admin');  
-     window.location.href = '/Frontend/html/admin.html';  
+     window.location.href = 'Frontend/html/admin.html';  
      return;
    }
  
@@ -22,7 +22,7 @@
    if (user) {
      alert(`Bienvenido, ${user.username}`);
      localStorage.setItem('loggedInUser', username);  
-     window.location.href = '/index.html'; 
+     window.location.href = 'index.html'; 
    } else {
      alert('Usuario o contraseña incorrectos');
    }
